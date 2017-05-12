@@ -7,8 +7,8 @@ class Buttons extends React.Component {
         return (
             <div className="Button-row">
                 <RaisedButton label="Alphabetical" onTouchTap={this.props.alphaSort} primary={!this.props.alpha} secondary={this.props.alpha}/>
-                <RaisedButton label="Created" onTouchTap={this.props.createdSort} primary={!this.props.created} secondary={this.props.created}/>
-                <RaisedButton label="Modified" onTouchTap={this.props.modifiedSort} primary={!this.props.modified} secondary={this.props.modified}/>
+                <RaisedButton label="Recent" onTouchTap={this.props.createdSort} primary={!this.props.created} secondary={this.props.created}/>
+                {/*<RaisedButton label="Modified" onTouchTap={this.props.modifiedSort} primary={!this.props.modified} secondary={this.props.modified}/>*/}
             </div>
         );
     }
