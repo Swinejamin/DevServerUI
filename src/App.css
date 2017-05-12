@@ -1,24 +1,88 @@
 .App {
-  text-align: center;
+    text-align: center;
+    width: 100vw;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+@media screen and (min-width: 900px) {
+    .App-open {
+        padding-left: 20%;
+    }
 }
-
 .App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+    position: fixed !important;
 }
 
-.App-intro {
-  font-size: large;
+.App-nav {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.App-button {
+    border-radius: .5rem;
+    border: none;
+    background-color: #333;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.App-main {
+    max-width: 160rem;
+    margin: 0 auto;
+    padding: 7rem 10% 0;
+
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.App-link {
+    flex-basis: auto;
+    width: 100%;
+    margin-top: 3rem;
+    text-decoration: none;
+    transition: all .75s ease;
+}
+.App-link:first-of-type {
+    width: 100%;
+}
+.App-link:hover {
+    /*filter: drop-shadow(0 0 1rem gray);*/
+}
+
+@media screen and (min-width: 564px) {
+    .App-link {
+        width: calc(50% - 5rem);
+    }
+}
+@media screen and (min-width: 1300px) {
+    .App-link {
+        width: calc(33.333% - 5 / 2 * 1rem);
+    }
+}
+.App-link-paper {
+    padding: 5rem 2.5rem 0;
+    height: 100%;
+}
+.App-logo {
+    max-height: 5rem;
+    max-width: 90%;
+    width: auto;
+}
+
+.App-title {
+    font-family: "BioRhyme", serif;
+    font-size: 3rem;
+    letter-spacing: .3rem;
+}
+
+.Button-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 3rem;
+    width: 100%;
+    flex-wrap: wrap;
 }
