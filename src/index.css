@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=BioRhyme:200,300,400,700,800|Inconsolata:400,700');
+
+html {
+    font-size: 10px;
+    box-sizing: border-box;
+}
+html * {
+    box-sizing: inherit;
+}
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    height: 100vh;
+    overflow: scroll;
 }
