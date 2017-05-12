@@ -51,7 +51,11 @@ class App extends Component {
         const comp = this;
         axios.get('http://bmswine.dev.cybernautic.com/directory.php')
             .then(res => {
-                projs = res.data;
+                projs = res.data.map((proj) =>{
+                    proj.created = new Date(proj.created * 1000);
+                    proj.modified = new Date(proj.modified * 1000);
+                    return proj;
+                });
                 console.dir(projs);
                 comp.setState({
                     projects: projs,
