@@ -51,7 +51,8 @@ class App extends Component {
         const comp = this;
         axios.get('http://bmswine.dev.cybernautic.com/directory.php')
             .then(res => {
-                projs = res.data.map((proj) =>{
+                console.dir(res);
+                projs = res.data.map((proj) => {
                     proj.created = new Date(proj.created * 1000);
                     proj.modified = new Date(proj.modified * 1000);
                     return proj;
@@ -61,7 +62,10 @@ class App extends Component {
                     projects: projs,
                     filtered: projs
                 });
-                comp.sortCreated()
+                comp.sortCreated();
+            })
+            .catch(res => {
+                console.log(res)
             });
     }
 
